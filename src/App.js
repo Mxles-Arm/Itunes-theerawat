@@ -11,13 +11,20 @@ function App() {
     <div className="App">
       <HashRouter>
         <Header />
+
         <Routes>
+          {/* หน้าเริ่มต้น */}
           <Route path="/" element={<Navigate to="/home" replace />} />
+
+          {/* Pages */}
           <Route path="/home" element={<Home />} />
           <Route path="/browse" element={<Browse />} />
           <Route path="/playlist" element={<Playlist />} />
+
+          {/* ถ้า path ผิด */}
           <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
+
       </HashRouter>
     </div>
   );
